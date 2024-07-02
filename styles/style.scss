@@ -1,0 +1,174 @@
+@use 'abstract/root';
+@use 'abstract/mixins';
+@use 'abstract/var';
+
+
+body{
+    min-height: 100vh;
+    background-image: url(../media/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: var.$font-principal;
+    
+    
+    overflow: hidden;
+
+    .page{
+        height: 100%;
+        width: 100%;
+        background-color: var.$preto;
+    }
+}
+
+
+.cabecalho{
+    // background-color: aqua;
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 0;
+
+    .cabecalho__menu{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 8rem;
+        
+
+        .menu__logo{
+            width: 3.5%;  
+
+            img{
+                animation: FadeIn 1s linear forwards;
+                width: 100%;
+            }
+        }
+
+        .menu__links{
+            padding: 0;
+            width: 33%;
+            display: flex;
+            justify-content: space-between;
+
+            .links__link{
+                animation: FadeIn 1s linear forwards;
+
+                color: var.$cinza;
+            }
+
+            .links__link:hover{
+                color: var.$vermelho;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.content{
+    // background-color: aqua;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+    margin-top: 2rem;
+
+    .content__title{
+        animation: FadeIn 1s linear forwards;
+        width: 60%;
+    }
+
+    .content__spiderman-img{
+        max-width: 58rem;
+        position: absolute;
+        width: 100%;
+        right: 12%;
+        top: 10;
+        animation: FadeIn 1.1s linear forwards;
+        z-index: 10;
+    }
+
+    .content__text{
+        width: 59%;
+        color: var.$cinza;
+        animation: FadeIn 1s linear forwards;
+
+    }
+
+    .content__buttons{
+        
+
+        display: flex;
+        gap: 2.5rem;
+        transform: skew(-20deg);
+        margin-top: 1rem;
+
+        a{
+             animation: FadeIn 1s linear forwards;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .9rem 0;
+            
+
+            // background-color: aqua;
+            width: 12rem;
+            color: var.$branco;
+            border-radius: .3rem;
+            font-size: 14px;
+        }
+
+        a:nth-child(1){
+            background-color: var.$vermelho;
+        }
+
+        a:nth-child(1):hover{
+            background-color: var.$vermelho3;
+            
+        }
+
+        a:nth-child(2){
+            border: 2px solid var.$vermelho;
+        }
+
+        a:nth-child(2):hover{
+            background-color: var.$vermelho3;
+            
+        }
+
+        
+}
+
+
+}
+
+
+.rodape{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // background-color: aqua;
+    width: 10%;
+    height: 3rem;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    animation: FadeIn 1s linear forwards;
+
+    img{
+        width: 20%;
+    }
+
+    .rodape__logo-marvel{
+        width: 40%;
+    }
+}
+
+@keyframes FadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
